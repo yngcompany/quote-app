@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">
       <div class="date">{{ today }}</div>
-      <h1>오늘의 명언</h1>
+      <h1 class="title">오늘의 명언</h1>
     </div>
     <QuoteCard />
   </div>
@@ -31,9 +31,12 @@ const today = dayjs().format('YYYY-MM-DD')
   margin-bottom: 0.25rem;
 }
 
+.title {
+  color: #000;
+}
+
 h1 {
   padding: 0;
   margin: 1rem 0;
-  color: #213547;
 }
 </style>
