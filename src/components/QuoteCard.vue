@@ -15,7 +15,7 @@ const author = ref('')
 
 async function fetchQuote() {
   try {
-    const res = await fetch('https://api.quotable.io/random')
+    const res = await fetch('https://cors-anywhere.herokuapp.com/https://api.quotable.io/random')
     if (!res.ok) throw new Error('API 오류 발생')
     const data = await res.json()
     quote.value = data.content
