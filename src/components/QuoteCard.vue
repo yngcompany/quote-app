@@ -25,7 +25,7 @@ async function fetchQuote() {
     quote.value = data.content
     author.value = data.author
   } catch (error) {
-    quote.value = '명언을 불러올 수 없습니다. (프록시 실패)'
+    quote.value = 'CORS정책으로 인해 데이터를 불러올 수 없습니다. 로컬에서 실행해 주세요.)'
     author.value = ''
     console.error('API 오류:', error)
   }
