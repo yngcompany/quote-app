@@ -39,7 +39,6 @@ onMounted(() => {
   padding: 1.5rem;
   max-width: 500px;
   margin: 2rem auto;
-  font-family: 'Georgia', serif;
   background-color: #FFF;
 }
 
@@ -47,12 +46,13 @@ onMounted(() => {
   font-size: 1.25rem;
   font-style: italic;
   margin-bottom: 1rem;
+  color: #213547 !important;
 }
 
 .quote-author {
   text-align: right;
   font-weight: bold;
-  color: #555;
+  color: #213547 !important;
 }
 
 .refresh-btn {
