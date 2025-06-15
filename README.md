@@ -32,6 +32,7 @@ git clone https://github.com/yngcompany/quote-app.git
 cd quote-app
 npm install
 npm run dev
+```
 
 ---
 
