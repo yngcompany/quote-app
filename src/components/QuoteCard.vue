@@ -15,15 +15,19 @@ const author = ref('')
 
 async function fetchQuote() {
   try {
-    const res = await fetch('http://api.quotable.io/random')
-    if (!res.ok) throw new Error('API 오류 발생')
+    const proxyUrl = 'https://thingproxy.freeboard.io/fetch/'
+    const targetUrl = 'https://api.quotable.io/random'
+    const res = await fetch(proxyUrl + targetUrl)
+
+    if (!res.ok) throw new Error('응답 오류')
+
     const data = await res.json()
     quote.value = data.content
     author.value = data.author
   } catch (error) {
-    quote.value = '명언을 불러올 수 없습니다. 좀 더 훌륭한 사람이 되세요.'
+    quote.value = '명언을 불러올 수 없습니다. (프록시 실패)'
     author.value = ''
-    console.error(error)
+    console.error('API 오류:', error)
   }
 }
 
